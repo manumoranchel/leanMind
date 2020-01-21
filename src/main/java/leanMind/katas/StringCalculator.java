@@ -7,8 +7,9 @@ public class StringCalculator {
 	}
 
 	protected int singleGroupValue(String stringToCalculate) {
+		String trimmedString = stringToCalculate.trim();
 		try {
-			return Integer.parseInt(stringToCalculate);
+			return Integer.parseInt(trimmedString);
 		} catch (NumberFormatException e) {
 			System.out.println("Found a non numeric value");
 		}

@@ -24,6 +24,13 @@ public class StringCalculatorTest extends StringCalculator{
 	}
 	
 	@Test
+	public void testCalculateStringBlankAndNumber() {
+		String preCond= " 1";
+		int res = calculateString(preCond);
+		assertTrue(res == 1);
+	}
+	
+	@Test
 	public void testCalculateStringEmpty() {
 		String preCond= "";
 		int res = calculateString(preCond);
