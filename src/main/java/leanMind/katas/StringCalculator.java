@@ -10,10 +10,11 @@ public class StringCalculator {
 	 * For a given String, calculate the sum of the values present in it. Values
 	 * will be separated by <code>,</code> by default. The String can optionally
 	 * contain a separator at the beginning. The separator will be within the start
-	 * separator code <code>//</code> and the end separator code <code>;</code>.
-	 * If the String contains a non-numeric value, 0 will be assumed for it.
+	 * separator code <code>//</code> and the end separator code <code>;</code>. If
+	 * the String contains a non-numeric value, 0 will be assumed for it.
 	 * 
-	 * @param stringToCalculate The String with the numbers and optionally the separator.
+	 * @param stringToCalculate The String with the numbers and optionally the
+	 *                          separator.
 	 * @return Addition of the valued within the String received.
 	 */
 	protected int calculateString(String stringToCalculate) {
