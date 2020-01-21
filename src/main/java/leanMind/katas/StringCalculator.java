@@ -2,8 +2,15 @@ package leanMind.katas;
 
 public class StringCalculator {
 	
+	private static final String SEPARATOR = ",";
+
 	protected int calculateString(String stringToCalculate) {
-		return singleGroupValue(stringToCalculate);
+		
+		int sum = 0;
+		for (String currentGroup : stringToCalculate.split(SEPARATOR)) {
+			sum += singleGroupValue(currentGroup); 
+		}
+		return sum;
 	}
 
 	protected int singleGroupValue(String stringToCalculate) {
