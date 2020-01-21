@@ -16,4 +16,26 @@ public class StringCalculatorTest extends StringCalculator{
 		assertTrue(res == 0);
 	}
 	
+	@Test
+	public void testCalculateStringSingleNumber() {
+		String preCond= "1";
+		int res = calculateString(preCond);
+		assertTrue(res == 1);
+	}
+	
+	
+	@Test
+	public void testSingleGroupValueLetter() {
+		String preCond= "a";
+		int res = singleGroupValue(preCond);
+		assertTrue(res == 0);
+	}
+	
+	@Test
+	public void testSingleGroupValueNumber() {
+		String preCond= "1";
+		int res = singleGroupValue(preCond);
+		assertTrue(res == 1);
+	}
+	
 }
