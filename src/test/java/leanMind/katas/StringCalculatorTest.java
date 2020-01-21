@@ -45,6 +45,13 @@ public class StringCalculatorTest extends StringCalculator{
 	}
 	
 	@Test
+	public void testCalculateManyNumbersString() {
+		String preCond= "1, 1, 3";
+		int res = calculateString(preCond);
+		assertTrue(res == 5);
+	}
+	
+	@Test
 	public void testCalculateStringEmpty() {
 		String preCond= "";
 		int res = calculateString(preCond);
