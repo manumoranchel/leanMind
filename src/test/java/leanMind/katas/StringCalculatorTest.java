@@ -38,6 +38,13 @@ public class StringCalculatorTest extends StringCalculator{
 	}
 	
 	@Test
+	public void testCalculateNumbersAndLettersString() {
+		String preCond= "1, a";
+		int res = calculateString(preCond);
+		assertTrue(res == 1);
+	}
+	
+	@Test
 	public void testCalculateStringEmpty() {
 		String preCond= "";
 		int res = calculateString(preCond);
