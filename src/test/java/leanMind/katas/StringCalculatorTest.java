@@ -23,6 +23,12 @@ public class StringCalculatorTest extends StringCalculator{
 		assertTrue(res == 1);
 	}
 	
+	@Test
+	public void testCalculateStringEmpty() {
+		String preCond= "";
+		int res = calculateString(preCond);
+		assertTrue(res == 0);
+	}
 	
 	@Test
 	public void testSingleGroupValueLetter() {
