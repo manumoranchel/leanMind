@@ -24,7 +24,8 @@ public class StringCalculator {
 		String stringToCalculatedTrimmed = stringToCalculate;
 
 		if (!separator.equals(DEFAULT_SEPARATOR)) {
-			int lastPositionSeparator = stringToCalculate.indexOf(EMBEDDED_SEPARATOR_END) + 1;
+			int lastPositionSeparator = stringToCalculate.indexOf(EMBEDDED_SEPARATOR_END);
+			lastPositionSeparator += EMBEDDED_SEPARATOR_END.length();
 			stringToCalculatedTrimmed = stringToCalculate.substring(lastPositionSeparator);
 		}
 
