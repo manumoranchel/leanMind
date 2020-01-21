@@ -59,11 +59,11 @@ public class StringCalculatorTest extends StringCalculator{
 		assertTrue(res == 5);
 	}
 	
-	@Ignore
+	@Test
 	public void testCalculateStringWithSeparatorEmbeeded() {
 		String preCond= "//#;1#2#3";
 		int res = calculateString(preCond);
-		assertTrue(res == 5);
+		assertTrue(res == 6);
 	}
 	
 	@Test
@@ -73,7 +73,12 @@ public class StringCalculatorTest extends StringCalculator{
 		assertTrue(res.equals(","));
 	}
 	
-	
+	@Test
+	public void testFetchSeparator() {
+		String preCond= "//#;";
+		String res = fetchSeparator(preCond);
+		assertTrue(res.equals("#"));
+	}
 	
 	@Test
 	public void testSingleGroupValueLetter() {
