@@ -5,6 +5,7 @@ package leanMind.katas;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class StringCalculatorTest extends StringCalculator{
@@ -31,6 +32,13 @@ public class StringCalculatorTest extends StringCalculator{
 	}
 	
 	@Test
+	public void testCalculateStringEmpty() {
+		String preCond= "";
+		int res = calculateString(preCond);
+		assertTrue(res == 0);
+	}
+	
+	@Test
 	public void testCalculateSeveralNumbersString() {
 		String preCond= "1, 1";
 		int res = calculateString(preCond);
@@ -51,12 +59,21 @@ public class StringCalculatorTest extends StringCalculator{
 		assertTrue(res == 5);
 	}
 	
-	@Test
-	public void testCalculateStringEmpty() {
-		String preCond= "";
+	@Ignore
+	public void testCalculateStringWithSeparatorEmbeeded() {
+		String preCond= "//#;1#2#3";
 		int res = calculateString(preCond);
-		assertTrue(res == 0);
+		assertTrue(res == 5);
 	}
+	
+	@Test
+	public void testFetchSeparatorNoSeparator() {
+		String preCond= "1111";
+		String res = fetchSeparator(preCond);
+		assertTrue(res.equals(","));
+	}
+	
+	
 	
 	@Test
 	public void testSingleGroupValueLetter() {
