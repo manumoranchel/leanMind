@@ -24,4 +24,12 @@ public class PhraseSplitTest{
 		int columnNumber = 2;
 		assertTrue("Ho/nla".equals(phraseSplit.split(phrase, columnNumber)));
 	}
+	
+	@Test
+	public void testMultipleWordPhrase() {
+		PhraseSplit phraseSplit = new PhraseSplit();
+		String phrase = "Hola Mundo";
+		int columnNumber = 7;
+		assertTrue("Hola/nMundo".equals(phraseSplit.split(phrase, columnNumber)));
+	}
 }
